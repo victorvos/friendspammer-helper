@@ -10,16 +10,14 @@ public class Record {
     public Record() {
         // used to instantiate the object, use setters to give it values
     }
-
-    public String getTo() {
+    public String getTo(){
         return to;
     }
 
     public void setTo(String to) {
         this.to = to;
     }
-
-    public String getFrom() {
+    public String getFrom(){
         return from;
     }
 
