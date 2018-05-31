@@ -13,6 +13,14 @@
 	</properties>
 
 	<build>
+		<extensions>
+			<extension>
+				<groupId>io.packagecloud.maven.wagon</groupId>
+				<artifactId>maven-packagecloud-wagon</artifactId>
+				<version>0.0.6</version>
+			</extension>
+		</extensions>
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -25,7 +33,26 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>packagecloud-friendspammer</id>
+			<url>packagecloud+https://packagecloud.io/victorvos/friendspammer</url>
+		</repository>
+		<snapshotRepository>
+			<id>packagecloud-friendspammer</id>
+			<url>packagecloud+https://packagecloud.io/victorvos/friendspammer</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.25</version>
+		</dependency>
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
